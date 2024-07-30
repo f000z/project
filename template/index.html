@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>O'quvchilar ro'yxati</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Ism</th>
+    <th>Familiya</th>
+    <th>Raqami</th>
+    <th>Photos</th>
+
+  </tr>
+    {% for i in index %}
+  <tr>
+
+
+    <td>{{ i.first_name }} </td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.phone_number }}</td>
+    <td><img style="width: 50px; border-radius: 50%;" src="{{i.photos.url}}" alt="IMG"></td>
+
+
+  </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
